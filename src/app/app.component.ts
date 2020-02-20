@@ -53,7 +53,7 @@ export class MyApp {
       this.statusBar.overlaysWebView(false);
 
       //*** Control Keyboard
-      this.keyboard.disableScroll(true);
+   //   this.keyboard.disableScroll(true);
     });
   }
 

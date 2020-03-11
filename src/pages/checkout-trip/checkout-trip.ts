@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController, LoadingController, ToastController} from "ionic-angular";
 import {TripService} from "../../services/trip-service";
 import {HomePage} from "../home/home";
+import { TripsPage } from "../trips/trips";
 
 @Component({
   selector: 'page-checkout-trip',
@@ -26,7 +27,7 @@ export class CheckoutTripPage {
   send() {
     // send booking info
     let loader = this.loadingCtrl.create({
-      content: "Please wait..."
+      content: "Processando pagamento..."
     });
     // show message
     let toast = this.toastCtrl.create({
@@ -43,7 +44,7 @@ export class CheckoutTripPage {
       loader.dismiss();
       toast.present();
       // back to home page
-      this.nav.setRoot(HomePage);
+      this.nav.setRoot(TripsPage);
     }, 3000)
   }
 }

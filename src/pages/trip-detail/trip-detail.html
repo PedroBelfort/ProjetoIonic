@@ -24,35 +24,51 @@
       <ion-col text-center>
         <div class="text-sm">
           <div>
-            <ion-icon name="time" class="text-white"></ion-icon>
+                 <!--  <ion-icon name="time" class="text-white"></ion-icon> -->
             <span ion-text color="light">{{ trip.time }}</span>
-            <ion-icon name="checkbox-outline" margin-left class="text-white" *ngIf="trip.free_cancellation"></ion-icon>
+            <span ion-text color="light">{{ trip.data_sorteio }}</span>
+            <!--    <ion-icon name="checkbox-outline" margin-left class="text-white" *ngIf="trip.free_cancellation"></ion-icon>
             <span ion-text color="light" *ngIf="trip.free_cancellation">Free cancellation</span>
-            <ion-icon name="list-box" margin-left class="text-white" *ngIf="trip.electric_voucher"></ion-icon>
-            <span ion-text color="light" *ngIf="trip.electric_voucher">Electronic voucher</span>
+          <ion-icon name="list-box" margin-left class="text-white" *ngIf="trip.electric_voucher"></ion-icon>
+            <span ion-text color="light" *ngIf="trip.electric_voucher">Electronic voucher</span> -->
           </div>
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <!--high light-->
+  <!--high light
   <div class="border-bottom" padding>
-    <span ion-text color="dark" class="bold">HIGHLIGHT</span>
+    <span ion-text color="dark" class="bold"></span>
     <ul class="highlight">
       <li *ngFor="let highlight of trip.highlights">
         <ion-icon name="checkmark" class="text-green"></ion-icon>
         <span ion-text color="primary">{{ highlight }}</span>
       </li>
     </ul>
-  </div>
+  </div> -->
 
-  <!--booking form-->
+
+    <!--description-->
+    <div class="border-bottom" padding>
+      <span ion-text color="primary" class="bold">Descrição</span>
+      <p ion-text>{{ trip.description }}</p>
+    </div>
+
+    <!--Localização seria categoria
+    <div class="border-bottom" padding>
+      <span ion-text color="primary" class="bold">LOCATION</span>
+      <p ion-text>{{ trip.location }}</p>
+    </div>
+  -->
+
+
+  <!--booking form 
   <div class="booking-form card round" margin>
     <div class="border-bottom" padding>
-      <h5>{{ trip.sub_name }}</h5>
+      <h5>{{ trip.sub_name }}</h5> -->
 
-      <!--choose guest-->
+      <!--choose guest
       <ion-grid class="filters" no-padding margin-top>
         <ion-row>
           <ion-col class="adult" width-70>
@@ -80,27 +96,34 @@
             <ion-icon name="add-circle" class="text-2x" tappable (click)="plusChildren()" color="secondary"></ion-icon>
           </ion-col>
         </ion-row>
-      </ion-grid>
-    </div>
-    <div padding class="form-bottom">
+      </ion-grid> 
+    </div>  -->
+  <!--  <div padding class="form-bottom"> -->
 <!--       <span ion-text color="dark" class="bold">{{ adults }} Adults</span> -->
       <!--booking button-->
-      <button ion-button class="pull-right" color="secondary" tappable (click)="checkout()">Book Now {{ adults * trip.price_adult +
+    <!--  <button ion-button class="pull-right" color="secondary" tappable (click)="checkout()">Book Now {{ adults * trip.price_adult +
         children * trip.price_child | currency:'USD':true }}
       </button>
       <div class="clear"></div>
     </div>
+  </div>-->
+
+  <div padding class="form-bottom">
+    <!--  
+    <button ion-button class="pull-right" color="secondary" tappable (click)="checkout()">Book Now {{ adults * trip.price_adult +
+      children * trip.price_child | currency:'USD':true }}
+    </button> -->
+
+
+    <button ion-button icon-start block color="dark" tappable (click)="escolherNumeros()">
+
+     Participar da rifa
+    </button>
+
+    
+
+    <div class="clear"></div>
   </div>
 
-  <!--description-->
-  <div class="border-bottom" padding>
-    <span ion-text color="primary" class="bold">DESCRIPTION</span>
-    <p ion-text>{{ trip.description }}</p>
-  </div>
 
-  <!--address-->
-  <div class="border-bottom" padding>
-    <span ion-text color="primary" class="bold">LOCATION</span>
-    <p ion-text>{{ trip.location }}</p>
-  </div>
 </ion-content>

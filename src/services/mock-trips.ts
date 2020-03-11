@@ -1,16 +1,17 @@
+
 export let TRIPS = [
   {
     id: 1,
-    name: "Copacabana Beach",
+    name: "Viagem para copacabana",
     price_adult: 60,
     price_child: 30,
-    time: "12h",
+    time: "200 Números",
     free_cancellation: 1,
     electric_voucher: 1,
     sub_name: "English Commentary Tour",
     thumb: "assets/img/trip/thumb/trip_1.jpg",
-    description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
-    location: "Rio de Janeiro, Brazil",
+    description: "Ipanema e Copacabana de trechos de areia mais isolados e um pouco menos conhecidos, como a Prainha, o Rio de Janeiro, no Brasil, é mais conhecido por suas praias. Pegue seu protetor solar e biquíni brasileiro e vá para as praias ensolaradas das melhores praias do Rio",
+    location: "Categoria de viagem",
     images: [
       "assets/img/trip/thumb/trip_5.jpg",
       "assets/img/trip/thumb/trip_6.jpg",
@@ -18,12 +19,13 @@ export let TRIPS = [
       "assets/img/trip/thumb/trip_8.jpg",
     ],
     highlights: [
-      "Numerous kiosks",
-      "First in a string of Atlantic Ocean-facing beaches",
-      "Sand is flanked by mountains in the background",
-      "Swing in the turquoise waters",
-      "Water Sports",
-    ]
+      "2 passagens executivas pela companhia aéreas Emyrates (Ida e volta)",
+      "1 Semana de Hospedagem no hotel Copacabana Palace",
+      "Almoco e Jantar inclusos",
+      "Serviço de fotografia ",
+  
+    ],
+    data_sorteio: "12/04/2020"
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ export let TRIPS = [
     description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
     location: "Rio de Janeiro, Brazil",
     images: [],
+    data_sorteio: "12/04/2020",
     highlights: []
   },
   {
@@ -53,7 +56,8 @@ export let TRIPS = [
     description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
     location: "São Paulo, Brazil",
     images: [],
-    highlights: []
+    highlights: [],
+    data_sorteio: "A definir"
   },
   {
     id: 4,
@@ -68,6 +72,8 @@ export let TRIPS = [
     description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
     location: "Fernando de Noronha, Brazil",
     images: [],
-    highlights: []
+    highlights: [],
+    data_sorteio: "A definir"
   }
 ]
+

@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {TripService} from "../../services/trip-service";
 import {CheckoutTripPage} from "../checkout-trip/checkout-trip";
+import { CartelaPage } from "../cartela/cartela";
 
 @Component({
   selector: 'page-trip-detail',
@@ -43,5 +44,11 @@ export class TripDetailPage {
   // go to checkout page
   checkout() {
     this.nav.push(CheckoutTripPage);
+  }
+
+
+  // go to cartela page
+  escolherNumeros(){
+    this.nav.push(CartelaPage);
   }
 }

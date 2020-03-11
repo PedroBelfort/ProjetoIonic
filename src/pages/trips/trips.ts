@@ -7,6 +7,7 @@ import {TripDetailPage} from "../trip-detail/trip-detail";
   selector: 'page-trips',
   templateUrl: 'trips.html'
 })
+
 export class TripsPage {
   // list of trips
   public trips: any;

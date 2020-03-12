@@ -1,8 +1,8 @@
 import {Component} from "@angular/core";
 import {NavController, LoadingController, ToastController} from "ionic-angular";
 import {TripService} from "../../services/trip-service";
-import {HomePage} from "../home/home";
-import { TripsPage } from "../trips/trips";
+
+import { MinhasRifasPage } from "../minhas-rifas/minhas-rifas";
 
 @Component({
   selector: 'page-checkout-trip',
@@ -33,8 +33,8 @@ export class CheckoutTripPage {
     let toast = this.toastCtrl.create({
       showCloseButton: true,
       cssClass: 'profile-bg',
-      message: 'Book Activity Success!',
-      duration: 3000,
+      message: 'Boa sorte!',
+      duration: 100,
       position: 'bottom'
     });
 
@@ -44,7 +44,7 @@ export class CheckoutTripPage {
       loader.dismiss();
       toast.present();
       // back to home page
-      this.nav.setRoot(TripsPage);
+      this.nav.setRoot(MinhasRifasPage);
     }, 3000)
   }
 }

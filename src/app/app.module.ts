@@ -25,6 +25,11 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import { CartelaPage } from "../pages/cartela/cartela";
+import { ConfirmaDadosPage } from "../pages/confirma-dados/confirma-dados";
+import { MinhasRifasPage } from "../pages/minhas-rifas/minhas-rifas";
+import { RifaCompradaPage } from "../pages/rifa-comprada/rifa-comprada";
+import { PerfilPage } from "../pages/perfil/perfil";
+import { TabsPage } from "../pages/tabs/tabs";
 
 // import services
 // end import services
@@ -46,7 +51,13 @@ import { CartelaPage } from "../pages/cartela/cartela";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    CartelaPage
+    CartelaPage,
+    ConfirmaDadosPage,
+    MinhasRifasPage,
+    RifaCompradaPage,
+    PerfilPage,
+    TabsPage
+
   ],
   imports: [
     BrowserModule,
@@ -74,7 +85,12 @@ import { CartelaPage } from "../pages/cartela/cartela";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    CartelaPage
+    CartelaPage,
+    ConfirmaDadosPage,
+    MinhasRifasPage,
+    RifaCompradaPage,
+    PerfilPage,
+    TabsPage
   ],
   providers: [
     StatusBar,

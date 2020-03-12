@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {TripService} from "../../services/trip-service";
 import {TripDetailPage} from "../trip-detail/trip-detail";
+import { TabsPage } from "../tabs/tabs";
 
 @Component({
   selector: 'page-trips',
@@ -12,8 +13,10 @@ export class TripsPage {
   // list of trips
   public trips: any;
 
+
   constructor(public nav: NavController, public tripService: TripService) {
     // set sample data
+    
     this.trips = tripService.getAll();
   }
 

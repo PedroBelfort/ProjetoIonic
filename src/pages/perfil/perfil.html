@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <ion-title>
+      <span ion-text>Perfil</span>
+    </ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <div class="card round" margin-top>
+
+    <ion-list no-margin>
+      <ion-item class="primary-bg">
+        <ion-avatar item-start>
+          <img src="assets/img/avatar.jpeg">
+        </ion-avatar>
+        <h2 ion-text class="text-white bold">João Firmino</h2>
+        <p ion-text class="text-secondary bold">User</p>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>Nome completo</ion-label>
+        <ion-input type="text"  value=""></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>CPF</ion-label>
+        <ion-input type="text" placeholder="000.000.00-00" value=""></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>RG</ion-label>
+        <ion-input type="text"  value=""></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>E-mail para contato</ion-label>
+        <ion-input type="text"  value=""></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>Data de Nascimento</ion-label>
+        <ion-input type="text"  value=""></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="dark" stacked>CEP</ion-label>
+        <ion-input type="text"  value=""></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div padding class="form-bottom">
+    
+  <button ion-button class="round" color="primary" margin-top full tappable (click)="escolherNumeros()">Atualizar</button>
+  <div class="clear"></div>
+  </div>
+
+</ion-content>

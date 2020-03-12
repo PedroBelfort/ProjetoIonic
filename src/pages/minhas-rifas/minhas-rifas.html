@@ -1,0 +1,66 @@
+<!--
+  Generated template for the MinhasRifasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar  color="primary">
+    <ion-title>
+      <span ion-text>Minhas rifas</span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar showCancelButton="always"></ion-searchbar>
+
+  <br />
+
+  <ion-list>
+    <ion-item-sliding class="trip card">
+      <button ion-item tappable (click)="VerRifaComprada()">
+        <ion-avatar item-start>
+          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
+
+        </ion-avatar>
+        <h2>Viagem para coacabana</h2>
+        <p>Sorteio dia: 20/05/2020</p>
+        <ion-note >Selecionado</ion-note>
+      </button>
+    </ion-item-sliding>
+
+    <br />
+
+    <ion-item-sliding class="trip card">
+      <button ion-item  tappable (click)="VerRifaComprada()">
+        <ion-avatar item-start>
+          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
+
+        </ion-avatar>
+        <h2>Viagem para coacabana</h2>
+        <p>Sorteio dia: 20/05/2020</p>
+        <ion-note >Selecionado</ion-note>
+      </button>
+    </ion-item-sliding>
+
+    <br />
+
+    <ion-item-sliding class="trip card">
+      <button ion-item (click)="VerRifaComprada()">
+        <ion-avatar item-start>
+          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
+        </ion-avatar>
+        <h2>Viagem para coacabana</h2>
+        <p>Sorteio dia: 20/05/2020</p>
+        <ion-note >Selecionado</ion-note>
+      </button>
+    </ion-item-sliding>
+   
+  
+  </ion-list>
+
+</ion-content>

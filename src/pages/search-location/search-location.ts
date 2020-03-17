@@ -16,33 +16,33 @@ export class SearchLocationPage {
     nearby: [
       {
         id: 1,
-        name: "Current Location"
+        name: "Carros"
       },
       {
         id: 2,
-        name: "Rio de Janeiro, Brazil"
+        name: "Relógios"
       },
       {
         id: 3,
-        name: "São Paulo, Brazil"
+        name: "Viagens"
       },
       {
         id: 4,
-        name: "New York, United States"
+        name: "Jóias"
       },
       {
         id: 5,
-        name: "London, United Kingdom"
+        name: "Acessórios"
       },
       {
         id: 6,
-        name: "Same as pickup"
+        name: "Roupas"
       }
     ],
     recent: [
       {
         id: 1,
-        name: "Rio de Janeiro"
+        name: "Casas"
       }
     ]
   };

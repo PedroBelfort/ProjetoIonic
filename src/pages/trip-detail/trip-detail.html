@@ -12,30 +12,25 @@
 
 <ion-content class="common-bg">
   <!--slides-->
-  <ion-slides class="to-top" pager>
-    <ion-slide *ngFor="let image of trip.images">
-      <img [src]="image" alt="">
-    </ion-slide>
-  </ion-slides>
+ 
 
-  <!--services-->
+  <!--services
   <ion-grid class="border-bottom dark-bg">
     <ion-row>
       <ion-col text-center>
         <div class="text-sm">
-          <div>
+          <div> -->
                  <!--  <ion-icon name="time" class="text-white"></ion-icon> -->
-            <span ion-text color="light">{{ trip.time }}</span>
-            <span ion-text color="light">{{ trip.data_sorteio }}</span>
+            
             <!--    <ion-icon name="checkbox-outline" margin-left class="text-white" *ngIf="trip.free_cancellation"></ion-icon>
             <span ion-text color="light" *ngIf="trip.free_cancellation">Free cancellation</span>
           <ion-icon name="list-box" margin-left class="text-white" *ngIf="trip.electric_voucher"></ion-icon>
-            <span ion-text color="light" *ngIf="trip.electric_voucher">Electronic voucher</span> -->
+            <span ion-text color="light" *ngIf="trip.electric_voucher">Electronic voucher</span>
           </div>
         </div>
       </ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid>  -->
 
   <!--high light
   <div class="border-bottom" padding>
@@ -49,12 +44,96 @@
   </div> -->
 
 
-    <!--description-->
+    <!--description
     <div class="border-bottom" padding>
       <span ion-text color="primary" class="bold">Descrição</span>
-      <p ion-text>{{ trip.description }}</p>
-    </div>
+      <p ion-text></p>
+    </div> -->
 
+    <ion-card>
+      <ion-slides class="to-top" pager>
+        <ion-slide *ngFor="let image of trip.images">
+          <img [src]="image" alt="">
+        </ion-slide>
+      </ion-slides>
+      <ion-card-content>
+        <div>
+          <h2 class="text-center text bold">{{ trip.name }}</h2>
+        </div>
+
+        <div>
+          <ion-segment [(ngModel)]="tab">
+            <ion-segment-button value="premio">
+             Prêmio
+            </ion-segment-button>
+            <ion-segment-button value="detalhes">
+              Mais detalhes
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+        
+        <div [ngSwitch]="tab">
+          <ion-list *ngSwitchCase="'detalhes'">
+            <ul class="highlight" >
+              <p>
+                {{ trip.description }}
+              </p>
+              </ul>
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'premio'">
+        
+                <ul class="highlight" >
+                  <p *ngFor="let highlight of trip.highlights">
+                    <ion-icon name="checkmark"  class="text-green" item-start></ion-icon>
+                    {{ highlight }}
+                  </p>
+                </ul>
+              
+          </ion-list>
+        </div>
+       
+        <ion-row>
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <ion-badge color="primary">{{ trip.time }}</ion-badge>
+              <span>Na cartela</span>
+            </div>
+          </ion-col>
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="pricetag"></ion-icon>
+              <ion-badge color="primary">{{ trip.price_adult | currency:'USD':true }}</ion-badge>
+              <span>Valor rifa</span>
+            </div>
+          </ion-col>
+          <ion-col center text-center>
+            <div>
+              <ion-icon name="calendar"></ion-icon>
+              <ion-badge color="primary">{{ trip.data_sorteio }}</ion-badge>
+              <span>Data sorteio</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <div padding style="padding-top: 0px;">
+     
+  
+      <button ion-button class="round" color="primary"  full tappable (click)="confirmarDados()">Participar da rifa</button>
+  
+      <div class="clear"></div>
+    </div>
+  
+  
+  </ion-content>
+  
+ <!--  
+      <button ion-button class="pull-right" color="secondary" tappable (click)="checkout()">Book Now {{ adults * trip.price_adult +
+        children * trip.price_child | currency:'USD':true }}
+      </button> -->
     <!--Localização seria categoria
     <div class="border-bottom" padding>
       <span ion-text color="primary" class="bold">LOCATION</span>
@@ -108,16 +187,4 @@
     </div>
   </div>-->
 
-  <div padding class="form-bottom">
-    <!--  
-    <button ion-button class="pull-right" color="secondary" tappable (click)="checkout()">Book Now {{ adults * trip.price_adult +
-      children * trip.price_child | currency:'USD':true }}
-    </button> -->
-
-    <button ion-button class="round" color="primary" margin-top full tappable (click)="confirmarDados()">Confirmar</button>
-
-    <div class="clear"></div>
-  </div>
-
-
-</ion-content>
+ 

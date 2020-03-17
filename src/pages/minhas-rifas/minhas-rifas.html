@@ -15,50 +15,27 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="common-bg">
   <ion-searchbar showCancelButton="always"></ion-searchbar>
 
   <br />
 
+
   <ion-list>
-    <ion-item-sliding class="trip card">
-      <button ion-item tappable (click)="VerRifaComprada()">
-        <ion-avatar item-start>
-          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
-
-        </ion-avatar>
-        <h2>Viagem para coacabana</h2>
-        <p>Sorteio dia: 20/05/2020</p>
-        <ion-note >Selecionado</ion-note>
-      </button>
-    </ion-item-sliding>
-
-    <br />
-
-    <ion-item-sliding class="trip card">
-      <button ion-item  tappable (click)="VerRifaComprada()">
-        <ion-avatar item-start>
-          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
-
-        </ion-avatar>
-        <h2>Viagem para coacabana</h2>
-        <p>Sorteio dia: 20/05/2020</p>
-        <ion-note >Selecionado</ion-note>
-      </button>
-    </ion-item-sliding>
-
-    <br />
-
-    <ion-item-sliding class="trip card">
-      <button ion-item (click)="VerRifaComprada()">
-        <ion-avatar item-start>
-          <img src="/www/assets/img/trip/thumb/trip_1.jpg">
-        </ion-avatar>
-        <h2>Viagem para coacabana</h2>
-        <p>Sorteio dia: 20/05/2020</p>
-        <ion-note >Selecionado</ion-note>
-      </button>
-    </ion-item-sliding>
+    <div  *ngFor="let trip of trips">
+      <ion-item-sliding class="trip card" tappable (click)="viewDetail(trip.id)" >
+        <button ion-item tappable (click)="VerRifaComprada()">
+          <ion-avatar item-start>
+            <img [src]="trip.thumb" alt="">
+          </ion-avatar>
+          <h2>{{ trip.name }}</h2>
+          <p>{{ trip.data_sorteio }}</p>
+          <ion-note >Selecionado</ion-note>
+        </button>
+      </ion-item-sliding>
+      <br />
+    </div>
+    
    
   
   </ion-list>

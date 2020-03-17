@@ -1,4 +1,21 @@
+
 page-trips,
+
+.single_product_item {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.toolbar-background {
+  background-color: #bf40bf;
+}
+
+.slide-padding{
+ height: fit-content;
+}
+
 .trips {
 	.card {
 		border-radius: 1rem
@@ -9,6 +26,7 @@ page-trips,
     .background {
       background-size: 100% auto;
       background-position: center;
+  
 
       .background-filter {
         height: 16rem;
@@ -25,3 +43,4 @@ page-trips,
     }
   }
 }
+

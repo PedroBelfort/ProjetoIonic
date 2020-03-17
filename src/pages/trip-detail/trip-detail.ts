@@ -16,6 +16,8 @@ export class TripDetailPage {
   // number of children
   public children = 0;
 
+  public tab = 'premio';
+
   constructor(public nav: NavController, public tripService: TripService) {
     // set sample data
     this.trip = tripService.getItem(1);

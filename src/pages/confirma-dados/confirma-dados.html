@@ -15,20 +15,10 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content class="common-bg">
+  <h2 class="text bold" padding style="padding-top: 0px ; padding-bottom: 0px;" >Oi Cléia,<small> confirme seus dados para participar da rifa</small></h2>
 
-  <div class="card round" margin-top>
-
-    <ion-list no-margin>
-      <ion-item class="primary-bg">
-        <ion-avatar item-start>
-          <img src="assets/img/avatar.jpeg">
-        </ion-avatar>
-        <h2 ion-text class="text-white bold">João Firmino</h2>
-        <p ion-text class="text-secondary bold">User</p>
-      </ion-item>
-    </ion-list>
-
+  <ion-card  style="padding-top: 0px;" >
     <div padding>
       <ion-item no-padding>
         <ion-label color="dark" stacked>Nome completo</ion-label>
@@ -55,11 +45,11 @@
         <ion-input type="text"  value=""></ion-input>
       </ion-item>
     </div>
-  </div>
+  </ion-card>
 
-  <div padding class="form-bottom">
+  <div padding style="padding-top: 0px;">
     
-  <button ion-button class="round" color="primary" margin-top full tappable (click)="escolherNumeros()">Confirmar</button>
+  <button ion-button class="round" color="primary"  full tappable (click)="escolherNumeros()">Confirmar</button>
   <div class="clear"></div>
   </div>
 

@@ -24,9 +24,26 @@
       <ion-icon name="checkmark"></ion-icon>
     </button>
   </ion-fab>
+   
+ <!-- https://ionicacademy.com/ionic-tokeninput/-->
 
-  <div class="card round" margin-top>
+ 
+   <rl-tag-input
+   [(ngModel)]="topics"
+   [addOnBlur]="false"
+   [autocomplete]="true"
+   [autocompleteItems]="preparedTags"
+   placeholder="Pesquisar número da sorte">
+ </rl-tag-input>
+
+   <ion-list>
+     <ion-item *ngFor= "let talk of talks">
+            {{talk.name}}
+     </ion-item>
+   </ion-list>
    
+  <div class="card round text-center" margin-top >
+  <br/>
     <ion-chip><ion-label>1212</ion-label></ion-chip>
     <ion-chip><ion-label>1212</ion-label></ion-chip>
     <ion-chip><ion-label>1212</ion-label></ion-chip>
@@ -102,8 +119,11 @@
     <ion-chip><ion-label>1212</ion-label></ion-chip>
     <ion-chip><ion-label>1212</ion-label></ion-chip>
     <ion-chip><ion-label>1212</ion-label></ion-chip>
-    
+    <br />
    </div>
-   
+   <br />
+   <br />
+   <br />
+   <br />
 
 </ion-content>

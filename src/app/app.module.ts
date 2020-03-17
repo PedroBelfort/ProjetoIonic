@@ -29,7 +29,7 @@ import { ConfirmaDadosPage } from "../pages/confirma-dados/confirma-dados";
 import { MinhasRifasPage } from "../pages/minhas-rifas/minhas-rifas";
 import { RifaCompradaPage } from "../pages/rifa-comprada/rifa-comprada";
 import { PerfilPage } from "../pages/perfil/perfil";
-import { TabsPage } from "../pages/tabs/tabs";
+import { RlTagInputModule} from "angular2-tag-input";
 
 // import services
 // end import services
@@ -55,13 +55,13 @@ import { TabsPage } from "../pages/tabs/tabs";
     ConfirmaDadosPage,
     MinhasRifasPage,
     RifaCompradaPage,
-    PerfilPage,
-    TabsPage
+    PerfilPage
+
 
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpClientModule, 
     IonicModule.forRoot(MyApp, {
       scrollPadding: false,
       scrollAssist: true,
@@ -70,7 +70,9 @@ import { TabsPage } from "../pages/tabs/tabs";
     IonicStorageModule.forRoot({
       name: '__ionic3_start_theme',
         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    }),
+    RlTagInputModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -90,7 +92,7 @@ import { TabsPage } from "../pages/tabs/tabs";
     MinhasRifasPage,
     RifaCompradaPage,
     PerfilPage,
-    TabsPage
+ 
   ],
   providers: [
     StatusBar,

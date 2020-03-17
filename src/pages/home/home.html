@@ -5,7 +5,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <strong>Ionic 3</strong> Start Theme
+      <strong>Olha a Rifa</strong>
     </ion-title>
     <ion-buttons end>
       <button ion-button tappable (click)="presentNotifications($event)">
@@ -16,23 +16,49 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+
+
+  
 </ion-header>
 
-<ion-content padding class="animated fadeIn common-bg">
+<ion-content padding class="animated fadeIn common-bg trips detail-bg">
 
-  <ion-card no-margin margin-bottom class="full-width">
-    <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
-      <ion-icon name="search" color="primary" item-left></ion-icon>
-      <span>{{ search.name }}</span>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
-      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
-    </ion-item>
-  </ion-card>
+  <h2 class="text bold">Olá Cléia! <small>Vamos tentar a sorte hoje?</small></h2>
+ 
+
+    <ion-card no-margin margin-bottom class="full-width">
+      <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
+        <ion-icon name="search" color="primary" item-left></ion-icon>
+        <span>{{ search.name }}</span>
+      </ion-item>
+    </ion-card>
+
+  
 
   <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
-    <ion-icon name="search"></ion-icon> Search
+    <ion-icon name="search"></ion-icon>Pesquisar
   </button>
+  
+  <br />
+
+ <div class="trip card" *ngFor="let trip of trips" tappable (click)="viewDetail(trip.id)" margin-bottom>
+  <div class="background border-bottom" [ngStyle]="{'background-image': 'url(' + trip.thumb + ')'}">
+    <div class="background-filter rlt">
+      <div class="align-bottom" padding-left padding-right>
+        <h6 class="pull-left text-white" ion-text>{{ trip.name }}</h6>
+      <h6 class="pull-right text-white" ion-text>{{ trip.price_adult | currency:'USD':true }}</h6> 
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="padding-sm primary-bg">
+     <!--  <ion-icon name="time" class="text-white"></ion-icon>-->
+    <span ion-text class="text-white">{{ trip.time }}</span>
+   <!--   <span class="pull-right" ion-text color="light"><strong>per adult</strong> (childs has <span ion-text  class="text-green bold">50% OFF</span>)</span> -->
+    <span class="pull-right" ion-text color="light"><strong>Sorteio </strong>: <span ion-text  class="text-yellow bold">{{ trip.data_sorteio }}</span></span> 
+  </div>
+</div>
 
 </ion-content>
+
+

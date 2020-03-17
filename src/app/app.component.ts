@@ -8,13 +8,15 @@ import { Keyboard } from '@ionic-native/keyboard';
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
-import { TabsPage } from "../pages/tabs/tabs";
 
 export interface MenuItem {
+   
     title: string;
     component: any;
     icon: string;
 }
+
+
 
 @Component({
   templateUrl: 'app.html'
@@ -23,8 +25,8 @@ export interface MenuItem {
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
- // rootPage: any = LoginPage;
-    rootPage = TabsPage;
+  rootPage: any = LoginPage;
+   
 
 
   appMenuItems: Array<MenuItem>;

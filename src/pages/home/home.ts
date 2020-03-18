@@ -4,7 +4,6 @@ import {Storage} from '@ionic/storage';
 
 import {NotificationsPage} from "../notifications/notifications";
 import {SettingsPage} from "../settings/settings";
-import {TripsPage} from "../trips/trips";
 import {SearchLocationPage} from "../search-location/search-location";
 import { TripService } from "../../services/trip-service";
 import { TripDetailPage } from "../trip-detail/trip-detail";
@@ -45,9 +44,9 @@ export class HomePage {
   }
 
   // go to result page
-  doSearch() {
-    this.nav.push(TripsPage);
-  }
+ // doSearch() {
+   // this.nav.push(TripsPage);
+  //}
 
   viewDetail(id) {
     this.nav.push(TripDetailPage, {id: id});

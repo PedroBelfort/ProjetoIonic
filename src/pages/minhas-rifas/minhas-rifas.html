@@ -7,37 +7,88 @@
 <ion-header>
 
   <ion-navbar  color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goHome()">
+          <ion-icon name="arrow-back"></ion-icon>
+      </button>
+  </ion-buttons>
     <ion-title>
       <span ion-text>Minhas rifas</span>
     </ion-title>
   </ion-navbar>
 
+
 </ion-header>
 
 
 <ion-content padding class="common-bg">
-  <ion-searchbar showCancelButton="always"></ion-searchbar>
 
+  <h2 class="text bold">Olá Cléia! <small>Acompanhe suas rifas aqui</small></h2>
+  
+
+  <ion-searchbar showCancelButton="always" class="round"></ion-searchbar>
+
+ <!-- https://medium.com/angularbr/ionic-3-e-angular-5-criando-app-com-pesquisa-e-ordena%C3%A7%C3%A3o-de-dados-e5bf27b36824 --> 
   <br />
 
 
-  <ion-list>
-    <div  *ngFor="let trip of trips">
-      <ion-item-sliding class="trip card" tappable (click)="viewDetail(trip.id)" >
-        <button ion-item tappable (click)="VerRifaComprada()">
-          <ion-avatar item-start>
-            <img [src]="trip.thumb" alt="">
-          </ion-avatar>
-          <h2>{{ trip.name }}</h2>
-          <p>{{ trip.data_sorteio }}</p>
-          <ion-note >Selecionado</ion-note>
-        </button>
-      </ion-item-sliding>
-      <br />
-    </div>
-    
-   
+  <div padding>
+    <ion-segment [(ngModel)]="tab">
+      <ion-segment-button value="todas">
+        Todas
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Sorteio
+      </ion-segment-button>
+      <ion-segment-button value="premiadas">
+        Premiadas
+      </ion-segment-button>
+    </ion-segment>
+  </div>
   
-  </ion-list>
+  <div [ngSwitch]="tab">
+    <ion-list *ngSwitchCase="'todas'">
+      <div  *ngFor="let trip of trips">
+        <ion-item-sliding class="trip card" >
+          <button ion-item tappable (click)="VerRifaComprada()">
+            <ion-avatar item-start>
+              <img [src]="trip.thumb" alt="">
+            </ion-avatar>
+            <h2>{{ trip.name }}</h2>
+            <p>{{ trip.data_sorteio }}</p>
+          </button>
+        </ion-item-sliding>
+        <br />
+      </div>
+     
+    </ion-list>
+ 
+    <ion-list *ngSwitchCase="'puppies'">
+      <h2 class="text bold">Olá Cléia! <small> você ainda não esta concorrendo...</small></h2>
+      <h2 class="text bold">Confira nossos prêmios! <small> Vamos tentar a sorte hoje?</small></h2>
+      <button ion-button class="round" color="primary"  full tappable (click)="goHome()">Buscar rifas</button>
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'premiadas'">
+        
+      <div  *ngFor="let trip of trips">
+        <ion-item-sliding class="trip card" >
+          <button ion-item tappable (click)="VerRifaPremiada()">
+            <ion-avatar item-start>
+              <img [src]="trip.thumb" alt="">
+            </ion-avatar>
+            <h2>{{ trip.name }}</h2>
+            <p>{{ trip.data_sorteio }}</p>
+          </button>
+        </ion-item-sliding>
+        <br />
+      </div>
+
+     
+    </ion-list>
+  </div>
+  
+ 
 
 </ion-content>

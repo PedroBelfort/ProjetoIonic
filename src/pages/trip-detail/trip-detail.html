@@ -61,6 +61,35 @@
           <h2 class="text-center text bold">{{ trip.name }}</h2>
         </div>
 
+      
+          <ion-list>
+             <ul style="list-style: none; text-align: left; padding-left: 0px;">
+               <li>
+
+                <ion-icon name="thumbs-up" ></ion-icon>
+                <span>Na cartela</span>
+                <ion-badge color="primary">{{ trip.time }}</ion-badge>
+               
+                
+               </li>
+              <li>
+
+                <ion-icon name="calendar"></ion-icon>
+                <span>Data sorteio</span>
+                <ion-badge color="primary">{{ trip.data_sorteio }}</ion-badge>
+               
+              </li>
+             <li>
+
+              <ion-icon name="pricetag"></ion-icon>
+              <span>Valor rifa</span>
+              <ion-badge color="primary">{{ trip.price_adult | currency:'USD':true }}</ion-badge>
+            
+             </li>
+             </ul>
+          </ion-list>
+        
+
         <div>
           <ion-segment [(ngModel)]="tab">
             <ion-segment-button value="premio">
@@ -93,37 +122,13 @@
           </ion-list>
         </div>
        
-        <ion-row>
-          <ion-col center text-center>
-            <div>
-              <ion-icon name="thumbs-up"></ion-icon>
-              <ion-badge color="primary">{{ trip.time }}</ion-badge>
-              <span>Na cartela</span>
-            </div>
-          </ion-col>
-          <ion-col center text-center>
-            <div>
-              <ion-icon name="pricetag"></ion-icon>
-              <ion-badge color="primary">{{ trip.price_adult | currency:'USD':true }}</ion-badge>
-              <span>Valor rifa</span>
-            </div>
-          </ion-col>
-          <ion-col center text-center>
-            <div>
-              <ion-icon name="calendar"></ion-icon>
-              <ion-badge color="primary">{{ trip.data_sorteio }}</ion-badge>
-              <span>Data sorteio</span>
-            </div>
-          </ion-col>
-        </ion-row>
+       
+       
       </ion-card-content>
     </ion-card>
 
     <div padding style="padding-top: 0px;">
-     
-  
       <button ion-button class="round" color="primary"  full tappable (click)="confirmarDados()">Participar da rifa</button>
-  
       <div class="clear"></div>
     </div>
   

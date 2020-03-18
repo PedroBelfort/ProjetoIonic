@@ -10,50 +10,17 @@
 </ion-header>
 
 
-<h2 class="text bold">Olá Cléia! <small> você ainda não esta concorrendo...</small></h2>
-<h2 class="text bold">Confira nossos prêmios! <small> Vamos tentar a sorte hoje?</small></h2>
 
 <ion-content class="common-bg">
-  <!--slides-->
+
+  <div padding>
+    <h2 class="text bold">Parabéns Cléia! <small> Você foi a sorteada para o prêmio:</small></h2>
+    <h2 class="text bold">{{ trip.name }} </h2>
+</div>
+
  
-
-  <!--services
-  <ion-grid class="border-bottom dark-bg">
-    <ion-row>
-      <ion-col text-center>
-        <div class="text-sm">
-          <div> -->
-                 <!--  <ion-icon name="time" class="text-white"></ion-icon> -->
-            
-            <!--    <ion-icon name="checkbox-outline" margin-left class="text-white" *ngIf="trip.free_cancellation"></ion-icon>
-            <span ion-text color="light" *ngIf="trip.free_cancellation">Free cancellation</span>
-          <ion-icon name="list-box" margin-left class="text-white" *ngIf="trip.electric_voucher"></ion-icon>
-            <span ion-text color="light" *ngIf="trip.electric_voucher">Electronic voucher</span>
-          </div>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>  -->
-
-  <!--high light
-  <div class="border-bottom" padding>
-    <span ion-text color="dark" class="bold"></span>
-    <ul class="highlight">
-      <li *ngFor="let highlight of trip.highlights">
-        <ion-icon name="checkmark" class="text-green"></ion-icon>
-        <span ion-text color="primary">{{ highlight }}</span>
-      </li>
-    </ul>
-  </div> -->
-
-
-    <!--description
-    <div class="border-bottom" padding>
-      <span ion-text color="primary" class="bold">Descrição</span>
-      <p ion-text></p>
-    </div> -->
-
     <ion-card>
+
       <ion-slides class="to-top" pager>
         <ion-slide *ngFor="let image of trip.images">
           <img [src]="image" alt="">
@@ -101,10 +68,19 @@
              <li>
 
               <ion-icon name="pricetag"></ion-icon>
+              <span>Numero sorteado</span>
+              <ion-badge color="dark">1212</ion-badge>
+            
+             </li>
+
+             <li>
+
+              <ion-icon name="pricetag"></ion-icon>
               <span>Valor total</span>
               <ion-badge color="primary">$180.00</ion-badge>
             
              </li>
+
              </ul>
           </ion-list>
         
@@ -142,6 +118,13 @@
               
           </ion-list>
         </div>
+
+        <h2 class="text bold">
+          Como resgatar meu prêmio?
+        </h2>
+        <p> 
+          s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb.
+        </p>
        
        
        

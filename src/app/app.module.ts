@@ -30,6 +30,7 @@ import { MinhasRifasPage } from "../pages/minhas-rifas/minhas-rifas";
 import { RifaCompradaPage } from "../pages/rifa-comprada/rifa-comprada";
 import { PerfilPage } from "../pages/perfil/perfil";
 import { RlTagInputModule} from "angular2-tag-input";
+import { RifaPremiadaPage } from "../pages/rifa-premiada/rifa-premiada";
 
 // import services
 // end import services
@@ -55,7 +56,8 @@ import { RlTagInputModule} from "angular2-tag-input";
     ConfirmaDadosPage,
     MinhasRifasPage,
     RifaCompradaPage,
-    PerfilPage
+    PerfilPage,
+    RifaPremiadaPage
 
 
   ],
@@ -92,6 +94,7 @@ import { RlTagInputModule} from "angular2-tag-input";
     MinhasRifasPage,
     RifaCompradaPage,
     PerfilPage,
+    RifaPremiadaPage
  
   ],
   providers: [

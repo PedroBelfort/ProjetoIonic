@@ -10,10 +10,10 @@
     <ion-buttons end>
       <button ion-button tappable (click)="presentNotifications($event)">
         <ion-icon name="notifications"></ion-icon>
-      </button>
-      <button ion-button tappable (click)="goToAccount()">
-        <ion-icon name="cog"></ion-icon>
-      </button>
+       </button>
+   <!--  <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="cog"></ion-icon> 
+      </button> -->
     </ion-buttons>
   </ion-navbar>
 
@@ -35,7 +35,7 @@
 
   
 
-  <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+  <button ion-button icon-start block no-margin color="primary" class="round" tappable>
     <ion-icon name="search"></ion-icon>Pesquisar
   </button>
   
@@ -53,7 +53,7 @@
   </div>
   <div class="padding-sm primary-bg">
      <!--  <ion-icon name="time" class="text-white"></ion-icon>-->
-    <span ion-text class="text-white">{{ trip.time }}</span>
+    <span ion-text class="text-white">{{ trip.time }} Números</span> 
    <!--   <span class="pull-right" ion-text color="light"><strong>per adult</strong> (childs has <span ion-text  class="text-green bold">50% OFF</span>)</span> -->
     <span class="pull-right" ion-text color="light"><strong>Sorteio </strong>: <span ion-text  class="text-yellow bold">{{ trip.data_sorteio }}</span></span> 
   </div>

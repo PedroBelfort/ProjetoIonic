@@ -1,6 +1,11 @@
 <ion-header>
 
   <ion-navbar  color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goHome()">
+          <ion-icon name="arrow-back"></ion-icon>
+      </button>
+  </ion-buttons>
     <ion-title>
       <span ion-text>Perfil</span>
     </ion-title>
@@ -9,17 +14,17 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding  class="common-bg">
 
   <div class="card round" margin-top>
 
     <ion-list no-margin>
       <ion-item class="primary-bg">
-        <ion-avatar item-start>
+      <!-- <ion-avatar item-start>
           <img src="assets/img/avatar.jpeg">
-        </ion-avatar>
-        <h2 ion-text class="text-white bold">João Firmino</h2>
-        <p ion-text class="text-secondary bold">User</p>
+        </ion-avatar>  -->
+        <h2 ion-text class="text-white bold">Cléia</h2>
+       <!--  <p ion-text class="text-secondary bold">User</p> -->
       </ion-item>
     </ion-list>
 
@@ -51,9 +56,8 @@
     </div>
   </div>
 
-  <div padding class="form-bottom">
-    
-  <button ion-button class="round" color="primary" margin-top full tappable (click)="escolherNumeros()">Atualizar</button>
+  <div padding style="padding-top: 0px;">
+    <button ion-button class="round" color="primary" margin-top full tappable (click)="escolherNumeros()">Atualizar</button>
   <div class="clear"></div>
   </div>
 

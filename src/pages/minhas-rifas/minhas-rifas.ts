@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { RifaCompradaPage } from '../rifa-comprada/rifa-comprada';
 import { TripService } from '../../services/trip-service';
+import { HomePage } from '../home/home';
+import { RifaPremiadaPage } from '../rifa-premiada/rifa-premiada';
 
 /**
  * Generated class for the MinhasRifasPage page.
@@ -19,6 +21,8 @@ export class MinhasRifasPage {
  
   public trips: any;
 
+  public tab = 'todas';
+
   constructor(public nav: NavController, public navParams: NavParams,  public tripService: TripService) {
     this.trips = tripService.getAll();
   }
@@ -30,6 +34,15 @@ export class MinhasRifasPage {
   VerRifaComprada() {
     this.nav.push(RifaCompradaPage);
   }
+
+  goHome(){
+    this.nav.setRoot(HomePage);
+  }
+
+  VerRifaPremiada(){
+    this.nav.push(RifaPremiadaPage);
+  }
+ 
 
 
 }
